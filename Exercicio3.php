@@ -5,29 +5,42 @@
  <título>Uso de Formulários</título>
  </cabeça>
  <corpo>
-     <Form Action="MediaNota.php" method = "post">
+     <Form Action="Exercicio3.php" method = "post">
   <input type = "text" name = "nome">
-  <input type = "text" name = "nota1">
-  <input type = "text" name = "nota2">
-  <input type = "text" name = "nota3">
-  <input type = "text" name = "nota4">
+  <input type = "number" name = "nota1">
+  <input type = "number" name = "nota2">
+  <input type = "number" name = "nota3">
+  <input type = "number" name = "nota4">
 
 
-         <tipo de entrada = valor "enviar" = "Enviar">
-         <tipo de entrada = valor "reset" = "Limpar">
+  <input type = "submit" value = "Enviar">
+  <input type = "reset" value = "Limpar"> 
+          
+           
 
+     </form>
 
-     </forma>
+ <?php 
+ if (isset($_POST["nota1"])){
 
- <?php
+ 
    
-   echo "<p><h2>Dados enviados com sucesso!<h2><p/><hr>";
-   echo "Nome: " . $_POST[nome]. "<br>";
-   echo "Nota1: " . $_POST[nota1]. "<br>";
-   echo "Nota2: " . $_POST[nota2]. "<br>";
-   echo "Nota3: " . $_POST[nota3]. "<br>";
-   echo "Nota4: " . $_POST[nota4]. "<br>";
-   $média = ((nota1 + nota2 + nota3 + nota4)/4);
+   echo "Nome: " . $_POST["nome"]. "<br>";
+   echo "Nota1: " . $_POST["nota1"]. "<br>";
+   echo "Nota2: " . $_POST["nota2"]. "<br>";
+   echo "Nota3: " . $_POST["nota3"]. "<br>";
+   echo "Nota4: " . $_POST["nota4"]. "<br>";
+   $media = ((nota1 + nota2 + nota3 + nota4)/4);
+ 
+   if ($media >=6){
+
+    echo "Aprovado!";
+   }else{
+       echo "Reprovado!";
+   }
+}
+
+
  
  ?>
  </corpo>
