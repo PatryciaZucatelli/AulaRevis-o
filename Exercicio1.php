@@ -3,7 +3,7 @@
 <html lang="pt-br">
  <cabeça>
  <meta charset="UTF-8">
- <título>Variáveis em PHP</título>
+ <título>Cálculo de reajuste de salário</título> <br><br>
  </cabeça>
  <corpo>
  <?php
@@ -12,7 +12,8 @@
 
    $NovoSalario = ($salarioAtual + $aumento);
 
- echo "Seu novo salário é: ". $NovoSalario . "<br>";
+  echo "Seu salário Atual é: " . $salarioAtual . "<br>";
+  echo " Com o aumento de 15%, seu novo salário é: ". $NovoSalario . "<br>";
  
  ?>
  </corpo>
